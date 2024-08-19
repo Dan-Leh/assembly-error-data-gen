@@ -811,7 +811,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   id: camera
   description: 
-  captureRgbImages: 1
+  captureRgbImages: 0
   firstCaptureFrame: 0
   captureTriggerMode: 0
   manualSensorAffectSimulationTiming: 0
@@ -985,6 +985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberOfPoses: 10
   PoseChangeInterval: 20
+  current_index: 0
 --- !u!1001 &1001528303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,23 +1081,27 @@ PrefabInstance:
     - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
         type: 3}
       propertyPath: PathToFolder
-      value: /Users/Dan/Documents/Masters AI&ES/Year 2/Graduation project/Unity/Data
-        Generations/v2_states
+      value: /Users/Dan/Documents/Masters AI&ES/Year 2/Graduation project/Unity/States_files/testing
       objectReference: {fileID: 0}
     - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
         type: 3}
       propertyPath: StateSetName
-      value: Train_states_v2
+      value: PossibleStatesStr
       objectReference: {fileID: 0}
     - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
         type: 3}
       propertyPath: NumberOfStates
-      value: 1015
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
+        type: 3}
+      propertyPath: GenerateListOfStates
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
         type: 3}
       propertyPath: GenerateImagesFromListOfStates
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7726756342163413678, guid: 569ebabdfcb7e4e048d9900a804de23d,
         type: 3}
@@ -1161,7 +1166,7 @@ MonoBehaviour:
     totalIterations: 100
     instanceCount: 1
     instanceIndex: 0
-  framesPerIteration: 1000
+  framesPerIteration: 100
   m_ProgressPercentage: 0
   references:
     version: 2
@@ -1422,7 +1427,7 @@ MonoBehaviour:
       type: {class: DeterminsticOrientation, ns: , asm: Assembly-CSharp}
       data:
         m_Enabled: 0
-        collapsed: 0
+        collapsed: 1
         <enabledStateCanBeSwitchedByUser>k__BackingField: 1
 --- !u!4 &1462588917
 Transform:
