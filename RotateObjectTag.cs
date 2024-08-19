@@ -35,7 +35,6 @@ public class RotateObjectTag : RandomizerTag
         for (int y = 0; y < NumberOfRotations; y++)
         {
             float y_value = (MaximumRotationY - MinimumRotationY) / NumberOfRotations * y + MinimumRotationY;
-            Debug.Log("y_value: " + y_value);
             RotationList.Add(OriginalRotation + new Vector3(OriginalRotation.x, y_value, OriginalRotation.z));
         }
     }
