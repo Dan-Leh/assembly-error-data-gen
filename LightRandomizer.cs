@@ -17,14 +17,9 @@ public class LightRandomizer : Randomizer
     public FloatParameter lightIntensity;
     public Vector3Parameter lightRotation;
 
-
-
-
     protected override void OnUpdate()
     {
         light.intensity = lightIntensity.Sample();
         light.transform.rotation = Quaternion.Euler(lightRotation.Sample());
     }
 }
-// originally 110000 to 120605
-//lower bound 30
