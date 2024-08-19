@@ -13,57 +13,49 @@ using System.Collections;
 // the .cs file it is defined in.
 public class RotateObjectTag : RandomizerTag
 {
-    public int StartIndex = 0;
+    [Tooltip("The minimum rotation value in the y-axis to add to the object's current rotation")]
+    public float MinimumRotationY = -60f;
 
-    public float MinimumRotationY = -40f;
-    public float MaximumRotationY = 40f;
-    public int NumberOfRotations = 100;
+    [Tooltip("The maximum rotation value in the y-axis to add to the object's current rotation")]
+    public float MaximumRotationY = 60f;
+
+    [Tooltip("The number of rotations to generate. Each pose will be a linear interpolation between the minimum and maximum rotation values for the y-axis.")]
+    public int NumberOfRotations = 20;
 
     private int current_index = 0;
-
     private Vector3 OriginalRotation;
-
     private List<Vector3> RotationList = new List<Vector3>();
+
 
     private void Start()
     {
         OriginalRotation = transform.rotation.eulerAngles;
 
+        // Construct the list of rotations to iterate through on each iteration
         for (int y = 0; y < NumberOfRotations; y++)
         {
             float y_value = (MaximumRotationY - MinimumRotationY) / NumberOfRotations * y + MinimumRotationY;
             Debug.Log("y_value: " + y_value);
             RotationList.Add(OriginalRotation + new Vector3(OriginalRotation.x, y_value, OriginalRotation.z));
         }
-
-        RotationList = RotationList.GetRange(StartIndex, NumberOfRotations - StartIndex);
-
-        // for (int y = 1; y <= euler_y_poses; y++)
-        // {
-        //     float y_value = (MaximumRotationY - MinimumRotationY) / euler_y_poses * y + MinimumRotationY;
-        //     RotationList.Add(OriginalRotation + new Vector3(0, y_value, 0));
-        // }
     }
 
     public void TakeStep()
     {
         transform.rotation = Quaternion.Euler(RotationList[current_index]);
         current_index++;
-        if (current_index == NumberOfRotations) // reset index at set interval
+        if (current_index == NumberOfRotations)  // reset index when last rotation is reached
         {
             current_index = 0;
         }
     }
 }
 
+
 [Serializable]
 [AddRandomizerMenu("Perception/RotateObject")]
 public class RotateObject : Randomizer
 {
-    // Sample FloatParameter that can generate random floats in the [0,360) range. The range can be modified using the
-    // Inspector UI of the Randomizer.
-
-
     protected override void OnIterationStart()
     {
         var tags = tagManager.Query<RotateObjectTag>();
