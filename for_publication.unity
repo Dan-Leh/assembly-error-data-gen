@@ -200,7 +200,6 @@ GameObject:
   - component: {fileID: 315977612}
   - component: {fileID: 315977611}
   - component: {fileID: 315977610}
-  - component: {fileID: 315977614}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -287,95 +286,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &315977614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315977609}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b435bdaa34ecb459f8f443b5c3ce0577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Position:
-    collapsed: 0
-    x:
-      rid: 8407622995821985827
-    y:
-      rid: 8407622995821985829
-    z:
-      rid: 8407622995821985830
-  Rotation:
-    collapsed: 0
-    x:
-      rid: 8407622995821985831
-    y:
-      rid: 8407622995821985832
-    z:
-      rid: 8407622995821985833
-  references:
-    version: 2
-    RefIds:
-    - rid: 8407622995821985827
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 50
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407622995821985829
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -20
-          maximum: 20
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407622995821985830
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407622995821985831
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -5
-          maximum: 5
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407622995821985832
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -5
-          maximum: 5
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407622995821985833
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -5
-          maximum: 5
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
 --- !u!1 &316862600
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,10 +297,10 @@ GameObject:
   - component: {fileID: 316862603}
   - component: {fileID: 316862602}
   - component: {fileID: 316862601}
-  - component: {fileID: 316862604}
   - component: {fileID: 316862605}
+  - component: {fileID: 316862606}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -461,138 +371,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &316862604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 316862600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7961d14205cb64bb3687632c233c44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldRandomizePosition: 1
-  positionMode: 1
-  position:
-    collapsed: 0
-    x:
-      rid: 8407623000796430349
-    y:
-      rid: 8407623000796430350
-    z:
-      rid: 8407623000796430359
-  shouldRandomizeRotation: 0
-  rotationMode: 1
-  rotation:
-    collapsed: 0
-    x:
-      rid: 8407623000796430352
-    y:
-      rid: 8407623000796430353
-    z:
-      rid: 8407623000796430354
-  shouldRandomizeScale: 0
-  scaleMode: 1
-  scale:
-    collapsed: 0
-    x:
-      rid: 8407623000796430355
-    y:
-      rid: 8407623000796430356
-    z:
-      rid: 8407623000796430357
-  useUniformScale: 0
-  uniformScale:
-    collapsed: 0
-    value:
-      rid: 8407623000796430358
-  references:
-    version: 2
-    RefIds:
-    - rid: 8407623000796430349
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430350
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430352
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430353
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430354
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430355
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430356
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430357
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430358
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430359
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -100
-          maximum: 100
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
 --- !u!114 &316862605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +458,20 @@ MonoBehaviour:
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
+--- !u!64 &316862606
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316862600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &323653807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 304506814885425043, guid: 569ebabdfcb7e4e048d9900a804de23d,
@@ -1118,7 +910,9 @@ PrefabInstance:
       propertyPath: managedReferences[8407623040009240588].range.minimum
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1295010885615522944, guid: 569ebabdfcb7e4e048d9900a804de23d, type: 3}
+    - {fileID: 7726756342163413678, guid: 569ebabdfcb7e4e048d9900a804de23d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 569ebabdfcb7e4e048d9900a804de23d, type: 3}
 --- !u!1 &1462588915
 GameObject:
@@ -1150,12 +944,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Randomizers:
-  - rid: 8407623014031556608
   - rid: 8407622991696101376
   - rid: 8407622995821985820
-  - rid: 2110148847088173067
   - rid: 2110148847088173056
-  - rid: 1127923333759762436
   - rid: 1127923334928138241
   - rid: 1127923334928138252
   configuration: {fileID: 0}
@@ -1171,47 +962,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1127923333759762436
-      type: {class: RotationRandomizer, ns: UnityEngine.Perception.Randomization.Randomizers,
-        asm: Unity.Perception.Runtime}
-      data:
-        m_Enabled: 0
-        collapsed: 1
-        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
-        rotation:
-          collapsed: 0
-          x:
-            rid: 1127923333759762440
-          y:
-            rid: 1127923333759762438
-          z:
-            rid: 1127923333759762441
-    - rid: 1127923333759762438
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 30
-          maximum: 150
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 1127923333759762440
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 1127923333759762441
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        value: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
     - rid: 1127923334928138241
       type: {class: CameraPoseDeterministic, ns: , asm: Assembly-CSharp}
       data:
@@ -1283,104 +1033,6 @@ MonoBehaviour:
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
-    - rid: 2110148847088173067
-      type: {class: BackgroundAssetRandomizer, ns: , asm: Assembly-CSharp}
-      data:
-        m_Enabled: 0
-        collapsed: 1
-        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
-        scale:
-          collapsed: 0
-          value:
-            rid: 2110148847088173068
-        rotation:
-          collapsed: 0
-          x:
-            rid: 2110148847088173081
-          y:
-            rid: 2110148847088173082
-          z:
-            rid: 2110148847088173083
-        position:
-          collapsed: 0
-          x:
-            rid: 8407623000796430374
-          y:
-            rid: 8407623000796430372
-          z:
-            rid: 8407623000796430373
-        positionZ2:
-          collapsed: 0
-          value:
-            rid: 3016722707573899264
-        min_objects: 0
-        max_objects: 25
-        prefab1: {fileID: 2862402734272025993, guid: e3b6bdec9ee7715498983463b72768f7,
-          type: 3}
-        prefab2: {fileID: 5657959827531560362, guid: 633ff5811a162ad4bbadf3e1bcd10f90,
-          type: 3}
-        prefab3: {fileID: 919132149155446097, guid: 268044eca85707647baaa90d75c94115,
-          type: 3}
-        prefab4: {fileID: 7154454500113964349, guid: 5c1cf4ef50d0572478bf5151bf75141e,
-          type: 3}
-        prefab5: {fileID: 3968408566508684448, guid: fd2f205b0e2833b4ba8aa1ab7d7f5fa6,
-          type: 3}
-        prefab6: {fileID: 3060968308620884572, guid: 3ea5891981415154ab574b21a998020c,
-          type: 3}
-        prefab7: {fileID: 1743632294584589327, guid: 4e52bd4b16118ec4988b2e2c14e5392c,
-          type: 3}
-        prefab8: {fileID: 6703712789944946584, guid: c7f6e0ccc7875a146b46823a764c5df8,
-          type: 3}
-    - rid: 2110148847088173068
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0.8
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 2110148847088173081
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 2110148847088173082
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 0
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 2110148847088173083
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -20
-          maximum: 20
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 3016722707573899264
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 200
-          maximum: 300
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407622991696101376
       type: {class: MyPartRandomizer, ns: , asm: Assembly-CSharp}
       data:
@@ -1391,42 +1043,6 @@ MonoBehaviour:
       type: {class: BackgroundPlaneRandomizer, ns: , asm: Assembly-CSharp}
       data:
         m_Enabled: 1
-        collapsed: 1
-        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
-    - rid: 8407623000796430372
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 10
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430373
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -350
-          maximum: -150
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623000796430374
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: -100
-          maximum: 100
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 8407623014031556608
-      type: {class: DeterminsticOrientation, ns: , asm: Assembly-CSharp}
-      data:
-        m_Enabled: 0
         collapsed: 1
         <enabledStateCanBeSwitchedByUser>k__BackingField: 1
 --- !u!4 &1462588917
