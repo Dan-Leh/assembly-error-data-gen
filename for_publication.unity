@@ -124,6 +124,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &181824963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4397882692874428487, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &270957047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161060783594535140, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &274927517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7811179333016100586, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &304423718
 GameObject:
   m_ObjectHideFlags: 3
@@ -199,28 +217,13 @@ GameObject:
   - component: {fileID: 315977613}
   - component: {fileID: 315977612}
   - component: {fileID: 315977611}
-  - component: {fileID: 315977610}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &315977610
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315977609}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &315977611
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -298,9 +301,8 @@ GameObject:
   - component: {fileID: 316862602}
   - component: {fileID: 316862601}
   - component: {fileID: 316862605}
-  - component: {fileID: 316862606}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Left Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,42 +460,6 @@ MonoBehaviour:
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
---- !u!64 &316862606
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 316862600}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &323653807 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 304506814885425043, guid: 569ebabdfcb7e4e048d9900a804de23d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1001528303}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &323653814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323653807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3ce5a255b694f4d8deb0673d40120f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartIndex: 0
-  MinimumRotationY: -60
-  MaximumRotationY: 60
-  NumberOfRotations: 20
 --- !u!1 &391084637
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,143 +743,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberOfPoses: 10
   PoseChangeInterval: 20
-  current_index: 0
---- !u!1001 &1001528303
+  currentIndex: 0
+  StartPosition: {x: 21.2, y: 127.5, z: 53.8}
+  StartRotation: {x: 72.7, y: -90, z: 0}
+  EndPosition: {x: 112.8, y: 88.7, z: 53.8}
+  EndRotation: {x: 31.6, y: -90, z: 0}
+--- !u!1001 &562765724
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 304506814885425043, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: m_Name
-      value: Full_car
-      objectReference: {fileID: 0}
-    - target: {fileID: 646471622630943240, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: useAutoLabeling
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 646471622630943240, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: autoLabelingSchemeType
-      value: AssetNameLabelingScheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 646471623067355028, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: labels.Array.data[0]
-      value: short_pin_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 646471623509724985, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: labels.Array.data[0]
-      value: short_pin_4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 41.1
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 1112956426673599785, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 5500966990488358142, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_Name
+      value: Full_car
       objectReference: {fileID: 0}
-    - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: PathToFolder
-      value: /Users/Dan/Documents/Masters AI&ES/Year 2/Graduation project/Unity/States_files/testing
+      value: /Users/Dan/Documents/Masters AI&ES/Year 2/Graduation project/Unity/SyntheticDatasetPipelineDan/Assets/State
+        lists
       objectReference: {fileID: 0}
-    - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: StateSetName
-      value: PossibleStatesStr
+      value: Train_states
       objectReference: {fileID: 0}
-    - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: NumberOfStates
-      value: 100
+      value: 5000
       objectReference: {fileID: 0}
-    - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: GenerateListOfStates
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295010885615522945, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: GenerateImagesFromListOfStates
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7726756342163413678, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7726756342163413678, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: StartIndex
-      value: 486
-      objectReference: {fileID: 0}
-    - target: {fileID: 7726756342163413678, guid: 569ebabdfcb7e4e048d9900a804de23d,
-        type: 3}
-      propertyPath: managedReferences[8407623040009240588].range.minimum
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1295010885615522944, guid: 569ebabdfcb7e4e048d9900a804de23d, type: 3}
-    - {fileID: 7726756342163413678, guid: 569ebabdfcb7e4e048d9900a804de23d, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 569ebabdfcb7e4e048d9900a804de23d, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
+--- !u!1 &1298494768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6737287810344840303, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1462588915
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +874,7 @@ MonoBehaviour:
   - rid: 2110148847088173056
   - rid: 1127923334928138241
   - rid: 1127923334928138252
+  - rid: 5019465659374108681
   configuration: {fileID: 0}
   constants:
     randomSeed: 539662031
@@ -957,7 +883,7 @@ MonoBehaviour:
     totalIterations: 100
     instanceCount: 1
     instanceIndex: 0
-  framesPerIteration: 100
+  framesPerIteration: 1
   m_ProgressPercentage: 0
   references:
     version: 2
@@ -1030,6 +956,126 @@ MonoBehaviour:
         range:
           minimum: -50
           maximum: -50
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108681
+      type: {class: BackgroundAssetRandomizer, ns: , asm: Assembly-CSharp}
+      data:
+        m_Enabled: 1
+        collapsed: 0
+        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+        scale:
+          collapsed: 0
+          value:
+            rid: 5019465659374108682
+        rotation:
+          collapsed: 0
+          x:
+            rid: 5019465659374108683
+          y:
+            rid: 5019465659374108684
+          z:
+            rid: 5019465659374108685
+        position:
+          collapsed: 0
+          x:
+            rid: 5019465659374108686
+          y:
+            rid: 5019465659374108687
+          z:
+            rid: 5019465659374108688
+        positionZ2:
+          collapsed: 0
+          value:
+            rid: 5019465659374108689
+        min_objects: 2
+        max_objects: 20
+        prefab1: {fileID: 1298494768}
+        prefab2: {fileID: 2072666995}
+        prefab3: {fileID: 1673412710}
+        prefab4: {fileID: 181824963}
+        prefab5: {fileID: 1991310381}
+        prefab6: {fileID: 270957047}
+        prefab7: {fileID: 274927517}
+        prefab8: {fileID: 1846294881}
+    - rid: 5019465659374108682
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108683
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108684
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108685
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108686
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108687
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108688
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5019465659374108689
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 1
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
@@ -1442,8 +1488,26 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1673412710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6469511688750482763, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1846294881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6305426420820247477, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1991310381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2184323295792188356, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2036355997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,29 +1568,14 @@ GameObject:
   - component: {fileID: 2067420208}
   - component: {fileID: 2067420207}
   - component: {fileID: 2067420206}
-  - component: {fileID: 2067420205}
   - component: {fileID: 2067420209}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Back Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &2067420205
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067420204}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2067420206
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1679,3 +1728,9 @@ MonoBehaviour:
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
+--- !u!1 &2072666995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3082360666434928613, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 562765724}
+  m_PrefabAsset: {fileID: 0}

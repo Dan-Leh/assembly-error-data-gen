@@ -1,0 +1,140 @@
+{
+    "indexParts": [
+        {
+            "index": 0,
+            "part": "base"
+        },
+        {
+            "index": 1,
+            "part": "front_bracket"
+        },
+        {
+            "index": 2,
+            "part": "long_brace_1"
+        },
+        {
+            "index": 3,
+            "part": "long_brace_2"
+        },
+        {
+            "index": 4,
+            "part": "short_brace_1"
+        },
+        {
+            "index": 5,
+            "part": "short_brace_2"
+        },
+        {
+            "index": 6,
+            "part": "acorn_nut"
+        },
+        {
+            "index": 7,
+            "part": "nut_1"
+        },
+        {
+            "index": 8,
+            "part": "nut_2"
+        },
+        {
+            "index": 9,
+            "part": "nut_3"
+        },
+        {
+            "index": 10,
+            "part": "nut_4"
+        },
+        {
+            "index": 11,
+            "part": "nut_5"
+        },
+        {
+            "index": 12,
+            "part": "short_pin_1"
+        },
+        {
+            "index": 13,
+            "part": "short_pin_2"
+        },
+        {
+            "index": 14,
+            "part": "short_pin_3"
+        },
+        {
+            "index": 15,
+            "part": "short_pin_4"
+        },
+        {
+            "index": 16,
+            "part": "pin_middle"
+        },
+        {
+            "index": 17,
+            "part": "pin_long"
+        },
+        {
+            "index": 18,
+            "part": "wing"
+        },
+        {
+            "index": 19,
+            "part": "round_washer_1"
+        },
+        {
+            "index": 20,
+            "part": "round_washer_2"
+        },
+        {
+            "index": 21,
+            "part": "round_washer_3"
+        },
+        {
+            "index": 22,
+            "part": "round_washer_4"
+        },
+        {
+            "index": 23,
+            "part": "round_washer_5"
+        },
+        {
+            "index": 24,
+            "part": "tooth_washer_1"
+        },
+        {
+            "index": 25,
+            "part": "tooth_washer_2"
+        },
+        {
+            "index": 26,
+            "part": "tooth_washer_3"
+        },
+        {
+            "index": 27,
+            "part": "tooth_washer_4"
+        },
+        {
+            "index": 28,
+            "part": "tooth_washer_5"
+        },
+        {
+            "index": 29,
+            "part": "wheel_1"
+        },
+        {
+            "index": 30,
+            "part": "wheel_2"
+        },
+        {
+            "index": 31,
+            "part": "wheel_3"
+        },
+        {
+            "index": 32,
+            "part": "wheel_4"
+        },
+        {
+            "index": 33,
+            "part": "pulley"
+        }
+    ]
+}
