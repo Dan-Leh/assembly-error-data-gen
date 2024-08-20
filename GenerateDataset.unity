@@ -124,24 +124,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &181824963 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4397882692874428487, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &270957047 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 161060783594535140, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &274927517 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7811179333016100586, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &304423718
 GameObject:
   m_ObjectHideFlags: 3
@@ -182,7 +164,7 @@ MonoBehaviour:
       type: {class: SoloEndpoint, ns: UnityEngine.Perception.GroundTruth.Consumers,
         asm: Unity.Perception.Runtime}
       data:
-        soloDatasetName: Train_states_limited
+        soloDatasetName: Train_dataset
     - rid: 5622127619315597323
       type: {class: AccumulationSettings, ns: UnityEngine.Perception.Settings, asm: Unity.Perception.Runtime}
       data:
@@ -371,7 +353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &316862605
 MonoBehaviour:
@@ -758,7 +740,7 @@ PrefabInstance:
     - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
         type: 3}
@@ -831,14 +813,18 @@ PrefabInstance:
       propertyPath: NumberOfStates
       value: 5000
       objectReference: {fileID: 0}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+        type: 3}
+      propertyPath: GenerateListOfStates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
+        type: 3}
+      propertyPath: GenerateImagesFromListOfStates
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
---- !u!1 &1298494768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6737287810344840303, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1462588915
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +860,6 @@ MonoBehaviour:
   - rid: 2110148847088173056
   - rid: 1127923334928138241
   - rid: 1127923334928138252
-  - rid: 5019465659374108681
   configuration: {fileID: 0}
   constants:
     randomSeed: 539662031
@@ -883,7 +868,7 @@ MonoBehaviour:
     totalIterations: 100
     instanceCount: 1
     instanceIndex: 0
-  framesPerIteration: 1
+  framesPerIteration: 5000
   m_ProgressPercentage: 0
   references:
     version: 2
@@ -956,126 +941,6 @@ MonoBehaviour:
         range:
           minimum: -50
           maximum: -50
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108681
-      type: {class: BackgroundAssetRandomizer, ns: , asm: Assembly-CSharp}
-      data:
-        m_Enabled: 1
-        collapsed: 0
-        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
-        scale:
-          collapsed: 0
-          value:
-            rid: 5019465659374108682
-        rotation:
-          collapsed: 0
-          x:
-            rid: 5019465659374108683
-          y:
-            rid: 5019465659374108684
-          z:
-            rid: 5019465659374108685
-        position:
-          collapsed: 0
-          x:
-            rid: 5019465659374108686
-          y:
-            rid: 5019465659374108687
-          z:
-            rid: 5019465659374108688
-        positionZ2:
-          collapsed: 0
-          value:
-            rid: 5019465659374108689
-        min_objects: 2
-        max_objects: 20
-        prefab1: {fileID: 1298494768}
-        prefab2: {fileID: 2072666995}
-        prefab3: {fileID: 1673412710}
-        prefab4: {fileID: 181824963}
-        prefab5: {fileID: 1991310381}
-        prefab6: {fileID: 270957047}
-        prefab7: {fileID: 274927517}
-        prefab8: {fileID: 1846294881}
-    - rid: 5019465659374108682
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108683
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108684
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108685
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108686
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108687
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108688
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
-        <minAllowed>k__BackingField: 0
-        <maxAllowed>k__BackingField: 0
-        <shouldCheckValidRange>k__BackingField: 0
-    - rid: 5019465659374108689
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
-      data:
-        range:
-          minimum: 0
-          maximum: 1
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
@@ -1488,74 +1353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1673412710 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6469511688750482763, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1846294881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6305426420820247477, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1991310381 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2184323295792188356, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2036355997
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2036355999}
-  - component: {fileID: 2036355998}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2036355998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036355997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 2a307f9f1a326a942820abeee6c7700e, type: 2}
---- !u!4 &2036355999
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036355997}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.706223, y: -96.799164, z: -0.5345193}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067420204
 GameObject:
@@ -1639,7 +1437,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85.724}
 --- !u!114 &2067420209
 MonoBehaviour:
@@ -1728,9 +1526,3 @@ MonoBehaviour:
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
---- !u!1 &2072666995 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3082360666434928613, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 562765724}
-  m_PrefabAsset: {fileID: 0}
