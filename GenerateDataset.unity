@@ -98,8 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 30dfefbe0dba7044a985524ad1b9a629,
-    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 30dfefbe0dba7044a985524ad1b9a629, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -161,8 +160,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 5622127619315597322
-      type: {class: SoloEndpoint, ns: UnityEngine.Perception.GroundTruth.Consumers,
-        asm: Unity.Perception.Runtime}
+      type: {class: SoloEndpoint, ns: UnityEngine.Perception.GroundTruth.Consumers, asm: Unity.Perception.Runtime}
       data:
         soloDatasetName: Train_dataset
     - rid: 5622127619315597323
@@ -387,24 +385,21 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 8407623040009240576
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 0
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623040009240577
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 0
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623040009240582
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -150
@@ -413,8 +408,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623040009240583
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -5
@@ -423,8 +417,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623040009240584
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -5
@@ -433,8 +426,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623040009240585
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -5
@@ -551,7 +543,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   id: camera
   description: 
-  captureRgbImages: 0
+  captureRgbImages: 1
   firstCaptureFrame: 0
   captureTriggerMode: 0
   manualSensorAffectSimulationTiming: 0
@@ -565,27 +557,22 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 5622127619315597320
-      type: {class: UnityCameraSensor, ns: UnityEngine.Perception.GroundTruth.Sensors,
-        asm: Unity.Perception.Runtime}
+      type: {class: UnityCameraSensor, ns: UnityEngine.Perception.GroundTruth.Sensors, asm: Unity.Perception.Runtime}
       data:
         superSamplingFactor: 1
     - rid: 8407622991696101377
-      type: {class: BoundingBox3DLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers,
-        asm: Unity.Perception.Runtime}
+      type: {class: BoundingBox3DLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers, asm: Unity.Perception.Runtime}
       data:
         enabled: 1
         annotationId: bounding box 3D
-        idLabelConfig: {fileID: 11400000, guid: 1096f3d84683f4c86aab93a565096c13,
-          type: 2}
+        idLabelConfig: {fileID: 11400000, guid: 1096f3d84683f4c86aab93a565096c13, type: 2}
         visualizationColor: {r: 0, g: 1, b: 0, a: 1}
     - rid: 8407622991696101378
-      type: {class: InstanceSegmentationLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers,
-        asm: Unity.Perception.Runtime}
+      type: {class: InstanceSegmentationLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers, asm: Unity.Perception.Runtime}
       data:
         enabled: 1
         annotationId: instance segmentation
-        idLabelConfig: {fileID: 11400000, guid: 34477a1254256427b81f19a5cf22dd4b,
-          type: 2}
+        idLabelConfig: {fileID: 11400000, guid: 34477a1254256427b81f19a5cf22dd4b, type: 2}
 --- !u!114 &391084642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,89 +724,75 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalPosition.z
       value: 41.1
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 4787240771580952592, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5500966990488358142, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 5500966990488358142, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: m_Name
       value: Full_car
       objectReference: {fileID: 0}
-    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: PathToFolder
-      value: /Users/Dan/Documents/Masters AI&ES/Year 2/Graduation project/Unity/SyntheticDatasetPipelineDan/Assets/State
-        lists
+      value: Assets/Assembly-error-data-gen/State lists
       objectReference: {fileID: 0}
-    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: StateSetName
       value: Train_states
       objectReference: {fileID: 0}
-    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: NumberOfStates
       value: 5000
       objectReference: {fileID: 0}
-    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: GenerateListOfStates
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb,
-        type: 3}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
+      propertyPath: RelativePathToFolder
+      value: Assembly-error-data-gen/State lists
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170654896674966979, guid: 58d154aa56f9e4b6fb28d596e6b8a3bb, type: 3}
       propertyPath: GenerateImagesFromListOfStates
       value: 1
       objectReference: {fileID: 0}
@@ -905,8 +878,7 @@ MonoBehaviour:
           z:
             rid: 2110148847088173060
     - rid: 2110148847088173057
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: 100000
@@ -915,8 +887,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 2110148847088173058
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: 100
@@ -925,8 +896,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 2110148847088173059
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: 43
@@ -935,8 +905,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 2110148847088173060
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -50
@@ -1246,8 +1215,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 1127923334928138257
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: 0
@@ -1256,8 +1224,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 1127923334928138258
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: 0.5
@@ -1266,8 +1233,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 1127923334928138259
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: 2400
@@ -1276,32 +1242,28 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 1127923334928138260
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 120
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 1127923334928138261
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 120
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 1127923334928138262
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 120
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 1127923334928138263
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 1
         <minAllowed>k__BackingField: 0
@@ -1354,6 +1316,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1750635095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1750635097}
+  - component: {fileID: 1750635096}
+  m_Layer: 0
+  m_Name: Unblurr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1750635096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750635095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: f983319d33344421b9cfb3935aada366, type: 2}
+--- !u!4 &1750635097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750635095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -77.481674, y: -18.519371, z: 85.160835}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067420204
 GameObject:
@@ -1471,24 +1482,21 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 8407623000796430337
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 0
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623000796430338
-      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         value: 0
         <minAllowed>k__BackingField: 0
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623000796430344
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -5
@@ -1497,8 +1505,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623000796430345
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -5
@@ -1507,8 +1514,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623000796430346
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -5
@@ -1517,8 +1523,7 @@ MonoBehaviour:
         <maxAllowed>k__BackingField: 0
         <shouldCheckValidRange>k__BackingField: 0
     - rid: 8407623000796430348
-      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
-        asm: Unity.Perception.Runtime}
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers, asm: Unity.Perception.Runtime}
       data:
         range:
           minimum: -20

@@ -19,8 +19,8 @@ public class MyPartRandomizerTag : RandomizerTag
     [Tooltip("If true, images will be generated from a list of states saved in a json file whose name is indicated by 'State Set Name' in the 'Path To Folder' directory. This checkbox or the one above needs to be ticked.")]
     public bool GenerateImagesFromListOfStates = false;
 
-    [Tooltip("The path to the folder containing the PartList.json file as well as the json file with all the states to be generated.")]
-    public string PathToFolder = "";
+    [Tooltip("The path from the project's root directory to the folder containing the PartList.json file as well as the json file with all the states to be generated.")]
+    public string RelativePathToFolder = "";
 
     [Tooltip("The name of the json file containing all the states to be generated (omit the .json extension).")]
     public string StateSetName = "Val_states_v2";
@@ -73,20 +73,20 @@ public class MyPartRandomizer : Randomizer
     }
 
     /// Function to save a class to a json file
-    private void SaveToJson(object statesAsJson, string name, string folder_path)
+    private void SaveToJson(object statesAsJson, string name, string relativeFolderPath)
     {
-        Debug.Log("Saving part list to json file");
+        string folderPath = Path.Combine(Application.dataPath, relativeFolderPath);
 
         string json = JsonUtility.ToJson(statesAsJson, true);
-        string filePath = Path.Combine(folder_path, name + ".json");
-        System.IO.File.WriteAllText(filePath, json);
+        string filePath = Path.Combine(folderPath, name + ".json");
+        File.WriteAllText(filePath, json);
         Debug.Log("file saved");
     }
 
     /// Get the prior saved string of states or part list from a json file
-    private object LoadFromJson(string folderPath, string name)
+    private object LoadFromJson(string relativeFolderPath, string name)
     {
-        string filePath = Path.Combine(folderPath, name + ".json");
+        string filePath = Path.Combine(Application.dataPath, relativeFolderPath, name + ".json");
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
@@ -300,12 +300,12 @@ public class MyPartRandomizer : Randomizer
 
                 if (tag.GenerateImagesFromListOfStates)  // if the GenerateImagesFromListOfStates checkbox is checked
                 {
-                    PossibleStatesStrJson possibleStatesClass = (PossibleStatesStrJson)LoadFromJson(tag.PathToFolder, tag.StateSetName);
+                    PossibleStatesStrJson possibleStatesClass = (PossibleStatesStrJson)LoadFromJson(tag.RelativePathToFolder, tag.StateSetName);
 
                     Debug.Assert(tag.NumberOfStates <= possibleStatesClass.numStates, "The number of states you want to generate is greater than the number of states in your list. Please change the number of states or generate a new list.");
                     statesToRender = possibleStatesClass.PossibleStatesStr.GetRange(0, tag.NumberOfStates);
 
-                    PartListJson indexToPartsClass = (PartListJson)LoadFromJson(tag.PathToFolder, "PartList");
+                    PartListJson indexToPartsClass = (PartListJson)LoadFromJson(tag.RelativePathToFolder, "PartList");
                     List<PartListJson.IndexToPart> indexToParts = indexToPartsClass.indexParts;
                     // check that the parts are in the same order as in the PartList.json file
                     for (int i = 0; i < partList.Count; i++)
@@ -319,7 +319,7 @@ public class MyPartRandomizer : Randomizer
                 else if (tag.GenerateListOfStates)  // if the GenerateListOfStates checkbox is checked
                 {
                     // randomly generate the specified amount of states and save them to a json
-                    statesToRender = MakeRandomStatesList(tag.NumberOfStates, tag.PathToFolder); 
+                    statesToRender = MakeRandomStatesList(tag.NumberOfStates, tag.RelativePathToFolder); 
                 }
                 else 
                 {
@@ -330,7 +330,7 @@ public class MyPartRandomizer : Randomizer
     }
 
     /// Function to generate a list of random states and save them to a json file
-    private List<string> MakeRandomStatesList(int nStates = 2000, string pathToFolder = "")
+    private List<string> MakeRandomStatesList(int nStates = 2000, string RelativePathToFolder = "")
     {
         // Initialize variables
         int numParts = partList.Count;
@@ -351,7 +351,7 @@ public class MyPartRandomizer : Randomizer
             partListJson.indexParts.Add(new PartListJson.IndexToPart { index = i, part = partList[i].name });
             strToIndex[partList[i].name] = i;
         }
-        SaveToJson(partListJson, "PartList", pathToFolder);
+        SaveToJson(partListJson, "PartList", RelativePathToFolder);
 
         // Make a copy of the part list for restoration
         var partListFull = new List<GameObject>(partList);
@@ -396,12 +396,12 @@ public class MyPartRandomizer : Randomizer
         states.Sort();
         possibleStatesJson.PossibleStates = states;
         possibleStatesJson.numStates = states.Count;
-        SaveToJson(possibleStatesJson, "PossibleStates", pathToFolder);
+        SaveToJson(possibleStatesJson, "PossibleStates", RelativePathToFolder);
 
         // Save the list of states as strings to JSON
         possibleStatesStrJson.PossibleStatesStr = states.Select(state => Convert.ToString(state, 2).PadLeft(numParts, '0')).ToList();
         possibleStatesStrJson.numStates = possibleStatesStrJson.PossibleStatesStr.Count;
-        SaveToJson(possibleStatesStrJson, "PossibleStatesStr", pathToFolder);
+        SaveToJson(possibleStatesStrJson, "PossibleStatesStr", RelativePathToFolder);
 
         return possibleStatesStrJson.PossibleStatesStr;
     }
