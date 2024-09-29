@@ -1,6 +1,6 @@
 # Data generation source code for _Find the Assembly Mistakes: Error Segmentation for Industrial Applications_
 
-## Check out our [project page](https://timschoonbeek.github.io/error_seg)!
+## Tutorial under construction, proper documentation coming soon! Check out our [project page](https://timschoonbeek.github.io/error_seg)!
 
 TLDR: Applying Change Detection Algorithms for Error Segmentation
 
