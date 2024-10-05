@@ -27,7 +27,7 @@ git clone https://github.com/Dan-Leh/Assembly-error-data-gen.git
 You should now see the Assembly-error-data-gen folder pop up under "Assets" in the Project tab of the Unity Editor. Open the `GenerateData ` Scene (located inside the Assembly-error-data-gen folder). All of the presets used in generating our training set are now loaded. 
 
 Make sure to choose the resolution at which you want to render images by clicking on the `Game` tab and selecting the dropdown containing the aspect ratio, as in the figure below:
-![Screenshot 1](Tutorial images/Screenshot1.png)
+![Screenshot 1](Tutorial%20images/Screenshot1.png)
 
 You now can press 'play' to start generating the data. The pipeline is set up to run for 200 iterations, with 5000 frames per iteration. Each iteration, a new pose is deterministically sampled, and the 5000 frames generated per iteration correspond to 5000 different states, determinstically sampled from a list, with the same pose. This way, each state is present in all poses and each pose contains a render of the object in each state.
 
