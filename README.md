@@ -19,6 +19,7 @@ The specific version of the unity editor used was 2021.3.19f1, we recommend you 
 All of the files and presets are in place to reproduce our dataset featuring a 3D model of the [IndustReal](https://timschoonbeek.github.io/industreal.html) car in 200 poses with the same 5000 distinct states per pose.
 
 Open your new Unity project that you set up by following the "getting started" tutorial. Clone this Github repository into the `Assets` folder of the Unity project. 
+
 🟢 Action: Using your terminal or command line application of choice, run the following commands:
 ```
 cd <PathToFolder>/<UnityProjectName>/Assets
@@ -26,6 +27,7 @@ git clone https://github.com/Dan-Leh/Assembly-error-data-gen.git
 ```
 
 You should now see the Assembly-error-data-gen folder pop up under `Assets` in the Project tab of the Unity Editor. 
+
 🟢 Action: Open the `GenerateData` Scene by double-clicking it (located inside the Assembly-error-data-gen folder). 
 All of the presets used in generating our training set are now loaded. 
 
@@ -33,6 +35,7 @@ All of the presets used in generating our training set are now loaded.
 ![Screenshot 1](Tutorial%20images/Screenshot1.png)
 
 Next, you will want to select a path at which Unity will save your generated images.
+
 🟢 Action: Open the **_Project Settings_** window, by selecting the menu `Edit → Project Settings`. Select `Perception` from the left panel. This will bring up the Perception Settings pane. In this pane you can see two text fields: **_Solo Datasets Name_**, which contains the name of the folder into which your images will be saved, and **_Base Path_**, the path to the place in which the aforementioned folder will be created each time you run the simulation. Choose a name and path to your liking, by clicking on `Change Folder`, and selecting your path of choice.
 
 🟢 Action: You can now press 'play' to start generating the data. 
@@ -86,10 +89,13 @@ Let us now walk you through using your own custom assembly object. Make sure to 
 🟢 Action: First, make sure each part is given a unique name. Choose a part that should never be removed, and name it 'base'. Then, add a 3D bounding box label to this part, so that the ground truth pose of the object can be retrieved for each image (this is required for generating a dataloading strategy wherein the pose difference between two images can be selected). 
 
 Since our scripts only generate realistic assembly images, they need to keep track of whether parts are touching each other or not, to selectively remove parts when generating a list of new states. Therefore, you need to attach a `Box Collider` to each object. Our scripts calculate whether there is a 'touching path' between each object part and the base block (which is always present) to determine whether a state is feasible, using the box colliders to tell if parts are touching.
+
 🟢 Action: Select all parts of your assembly object, and at the bottom of the _Inspector_ tab, select `Add Component → Physics → Box Collider`. A box collider is now attached to each part of your assembly object.
 
 Now, you can attach our scripts to your assembly object.
+
 🟢 Action: Add a `My Part Randomizer Tag` to the GameObject corresponding to your assembly obect. With the object selected in your _Hierarchy_ tab, select `Add Component` _Inspector_ tab and use the search function to find `My Part Randomizer Tag`.
+
 🟢 Action: Add the `Rotate Object Tag` component to your object in the same way.
 
 Now, attach a label to each part of the model and create a label configuration to provide to the perception camera (see [the aforementioned tutorial](https://docs.unity3d.com/Packages/com.unity.perception@1.0/manual/Tutorial/Phase1.html) for step-by-step instructions).
