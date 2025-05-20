@@ -1,6 +1,6 @@
 # Data generation source code for _Find the Assembly Mistakes: Error Segmentation for Industrial Applications_
 
-## Tutorial under construction, proper documentation coming soon! Check out our [project page](https://timschoonbeek.github.io/error_seg)!
+## Check out our [project page](https://timschoonbeek.github.io/error_seg)!
 
 TLDR: Applying Change Detection Algorithms for Error Segmentation
 
@@ -86,16 +86,20 @@ You can play with the values for these scripts, or feel free to use a randomizer
 
 Let us now walk you through using your own custom assembly object. Make sure to have your CAD model of the assembly object in a file format Unity can open, such as a .fbx file, and drop it somewhere in the `Assets` folder (eg. under `Assembly-error-data-gen → Prefabs`). Now, drag and drop the model into the _Hierarchy_ tab to make it appear in the current scene.
 
-🟢 Action: First, make sure each part is given a unique name. Choose a part that should never be removed, and name it 'base'. Then, add a 3D bounding box label to this part, so that the ground truth pose of the object can be retrieved for each image (this is required for generating a dataloading strategy wherein the pose difference between two images can be selected). 
+🟢 Action: First, make sure each part is given a unique name. Choose a part that should never be removed, and name it 'base'. Then, add a 3D bounding box label to this part, so that the ground truth pose of the object can be retrieved for each image (this is required for generating a dataloading strategy wherein the pose difference between two images can be determined and controlled for). 
 
-Since our scripts only generate realistic assembly images, they need to keep track of whether parts are touching each other or not, to selectively remove parts when generating a list of new states. Therefore, you need to attach a `Box Collider` to each object. Our scripts calculate whether there is a 'touching path' between each object part and the base block (which is always present) to determine whether a state is feasible, using the box colliders to tell if parts are touching.
+Since our scripts only generate images of realistic assemblies (i.e. no floating detached parts), they need to keep track of whether parts are touching each other or not, to selectively remove parts when generating a list of valid states. Therefore, you need to attach a `Box Collider` to each object. Our scripts calculate whether there is a 'touching path' between each object part and the base block (which is always present) to determine whether a state is feasible, using the box colliders to tell if parts are touching.
 
 🟢 Action: Select all parts of your assembly object, and at the bottom of the _Inspector_ tab, select `Add Component → Physics → Box Collider`. A box collider is now attached to each part of your assembly object.
 
 Now, you can attach our scripts to your assembly object.
 
-🟢 Action: Add a `My Part Randomizer Tag` to the GameObject corresponding to your assembly obect. With the object selected in your _Hierarchy_ tab, select `Add Component` _Inspector_ tab and use the search function to find `My Part Randomizer Tag`.
+🟢 Action: Add a `My Part Randomizer Tag` to the GameObject corresponding to your assembly obect. With the object selected in your _Hierarchy_ tab, select `Add Component` in the _Inspector_ tab and use the search function to find `My Part Randomizer Tag`.
 
-🟢 Action: Add the `Rotate Object Tag` component to your object in the same way.
+🟢 Action: Add the `Rotate Object Tag`, component to your object in the same way. Alternatively, use any script you'd like to control to generate the poses you need for your application.
 
-Now, attach a label to each part of the model and create a label configuration to provide to the perception camera (see [the aforementioned tutorial](https://docs.unity3d.com/Packages/com.unity.perception@1.0/manual/Tutorial/Phase1.html) for step-by-step instructions).
+Finally, make sure all of your object parts are labelled so that you can automatically generate segmentation masks or bounding boxes.
+
+🟢 Action: attach a label to each part of the model and create a label configuration to provide to the perception camera (see [the aforementioned tutorial](https://docs.unity3d.com/Packages/com.unity.perception@1.0/manual/Tutorial/Phase1.html) for step-by-step instructions).
+
+You can now generate your own assemboly error detection data, best of luck!
